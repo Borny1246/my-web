@@ -591,6 +591,40 @@
             }
         }
 
+        @media screen and (max-width: 768px) {
+            .skill-section {
+                padding: 1rem;
+                width: 95%;
+            }
+        }
+
+        .skill {
+            gap: 1.5rem;
+        }
+
+        @media screen and (max-width: 480px) {
+            .professional h1 {
+                font-size: 1.8rem;
+            }
+
+            .skill {
+                grid-template-columns: 1fr;
+                /* Stacks circles vertically */
+                gap: 2rem;
+            }
+
+            .progress-circle {
+                width: 120px;
+                /* Keep readable size */
+                height: 120px;
+            }
+
+            .skill h2 {
+                font-size: 1rem;
+            }
+        }
+
+
         @media (max-width: 768px) {
             .menu-toggle {
                 display: block;
