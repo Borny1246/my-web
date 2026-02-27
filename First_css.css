@@ -1,0 +1,246 @@
+html {
+    font-family: 'Times New Roman', Times, serif;
+    scroll-behavior: smooth;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+.servisection:hover {
+    transform: translate(10px, 10px);
+    transition: transform 0.9s ease;
+}
+
+header {
+    /* background-color: rgb(36, 108, 171);*/
+    font-family: 'Times New Roman', Times, serif;
+    text-align: left;
+    font-size: 20px;
+
+}
+
+.introduction {
+    display: flex;
+    background-color: ;
+    opacity: ;
+    width: 75%;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+.profilepicture {
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+}
+
+body {
+    /*background-image: url(image_cafe.jfif);*/
+    background-color: darkslategrey;
+}
+
+.contact {
+    width: 50%;
+}
+
+img {
+    float: right;
+    margin-left: 15px;
+    width: 300px;
+    height: 300px;
+}
+
+img:hover {
+    transform: rotate(1deg);
+    border-radius: 20px;
+}
+
+ul {
+    list-style-type: none;
+    /*remove all marker styles such as bullets*/
+    margin-left: 0;
+    padding: 0;
+    background-color: rgb(53, 72, 67);
+    display: flex;
+    /*gives the ul elements a horizontal layout*/
+    justify-content: flex-end;
+    /*displaying the navigation bar to the top right or float: right */
+
+}
+
+ul li a {
+    display: block;
+    /*turns the link to a clickable box*/
+    color: white;
+    /*text color*/
+    padding: 14px 16px;
+    /*setting the position of the link text between boaders*/
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: aqua;
+    border-radius: 5px;
+}
+
+.projects {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    margin: 30px auto;
+    width: ;
+    text-align: left;
+}
+
+.pic_2 {
+    align-items: flex-start;
+}
+
+.education {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+
+}
+
+.heading,
+.subtitle {
+    text-align: center;
+    font-size: 18px;
+}
+
+.myservices {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.datacollection,
+.sda {
+    flex: 1;
+    /* Makes both divs equal width */
+    padding: 20px;
+    background-color: ;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/*changes the background color when the cursor moves over */
+.dv:hover,
+.sda:hover,
+.datacollection:hover {
+    background-color: aqua;
+    color: black;
+    border-radius: 10px;
+}
+
+.dv {
+    flex: 1;
+    /* Makes both divs equal width */
+    padding: 20px;
+    background-color: ;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-image:
+        /* url('visualization_image_2.jpg') */
+    ;
+    color: ;
+    background: ;
+    background-size: ;
+
+}
+
+.skills {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    width: 50%;
+}
+
+.R,
+.powerbi,
+.ecxel {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+    font-size: 18px;
+}
+
+.R-bar,
+.excel-bar,
+.powerbi-bar {
+    height: 12px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.R-progress {
+    height: 100%;
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    border-radius: 10px;
+    transition: width 1s ease-in-out;
+    position: relative;
+}
+
+.R-progress::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    /*
+    background-image: linear-gradient(-45deg,
+            rgba(255, 255, 255, 0.2) 25%,
+            transparent 25%,
+            transparent 50%,
+            rgba(255, 255, 255, 0.2) 50%,
+            rgba(255, 255, 255, 0.2) 75%,
+            transparent 75%,
+            transparent);
+    background-size: 15px 15px;
+    animation: moveStripes 2s linear infinite; */
+}
+
+.powerbi-progress {
+    height: 100%;
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    border-radius: 10px;
+    transition: width 1s ease-in-out;
+    position: relative;
+}
+
+.powerbi-progress::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+}
+
+
+.excel-progress {
+    height: 100%;
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    border-radius: 10px;
+    transition: width 1s ease-in-out;
+    position: relative;
+}
+
+.excel-progress::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+ul li a .contact {
+    display: flex;
+}

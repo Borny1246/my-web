@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+
+    <title>
+        My portfolio
+    </title>
+    <header>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width =device-width, initial-scale= 1.0">
+        <h2><b>BORNFACE OTIENO</b></h2>
+
+
+        <link rel="stylesheet" href="First_css.css">
+
+    </header>
+    <ul class="navbar">
+        <li><a href="https://x.com/home" target="_blank">X(Twitter)</li></a><br>
+        <li><a href="#myprojects">MyProjects</a></li>
+        <li><a href="#Education">Education</a></li>
+        <li><a href="#myservices">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="introduction">
+        <div class="intro_par">
+            <b>Hey, I'm Bornface Ochieng Otieno from Kenya, a junior Statistician who is proficient in two programing
+                languages;<br>
+                R
+                and Python for Data analysis. <br>
+                For data visualization I use R but i am more efficient in Power BI which is more powerful. <br>
+                I am ready and willing to learn new skills as reponsibilities will keep on arising. </b><br><br>
+        </div>
+
+        <div class="profilepicture">
+            <img src="Born_1st.JPG" alt="My profile Picture">
+
+
+
+        </div>
+    </div>
+
+</body>
+
+
+<section class="projects" id="myprojects">
+    <h3>MY PROJECTS</h3>
+
+    <div class="pic_2">
+        <img src="pic_2.jpg" alt="">
+    </div>
+    <div>
+        I have done a number of personal projects just for practice to enhance my skills. <br>
+        I have been involved in several projects but only a few stand out.
+        The road accidents <br> recorded in Kenyan roads in the year 2015 - 2018 collected by the
+        Ministry of Transport <br> and Communication and obtained across all websites. <br>
+        Here is a simple dashboard I made using Power BI which i use frequently.
+
+    </div>
+</section>
+
+
+<section class="servicesection" id="myservices">
+    <h2 class="heading">My Services</h2>
+    <p class="subtitle">What will I offer you?</p>
+    <div class="myservices">
+
+        <div class="datacollection">
+
+            <head>
+                <h3>Data Collection</h3>
+                I will help you design tools to help you in collecting data using Kobo, CommCare, REDCap and google
+                forms.
+                <br><br>
+            </head>
+            <a href="https://www.surveycto.com/resources/guides/data-collection-methods-guide/">Read More</a>
+        </div>
+
+        <div class="sda">
+
+            <head>
+                <h3>Statistical Data Analysis</h3>
+            </head>
+            <p>I will apply different Statistical techniques to your data to make you understand the information your
+                data
+                is trying to relay to you.</p><br>
+            <a href="">Read More</a>
+        </div>
+
+        <div class="dv">
+
+            <head>
+                <h3>Data Visualization
+            </head>
+            </h3>
+            <p>I will build real time and informative dashboards on your data to help you see the trends in the data and
+                make decisions based on the information</p><br><br>
+            <a href="https://www.geeksforgeeks.org/r-language/data-visualization-with-r-and-ggplot2/"> Read More</a>
+        </div>
+    </div>
+</section>
+
+<section class="skills" id="myskills">
+    <h2>My Skills Progress</h2>
+
+    <div class="skill-item">
+        <div class="R">
+            <span><b>R Programming</b></span>
+            <span>70%</span>
+        </div>
+        <div class="R-bar">
+            <div class="R-progress" style="width: 70%;"></div>
+        </div>
+    </div>
+
+    <div class="powerbi">
+        <span><b>Power BI</b></span>
+        <span>50%</span>
+    </div>
+
+    <div class="powerbi-bar">
+        <div class="powerbi-progress" style="width: 50%;"></div>
+    </div>
+
+    <div class="excel">
+        <span><b>Excel</b></span>
+        <span>50%</span>
+    </div>
+
+    <div class="excel-bar">
+        <div class="excel-progress" style="width: 50%;"></div>
+    </div>
+
+
+    </div>
+
+</section>
+<section class="contact">
+
+</section>
+
+
+</html>

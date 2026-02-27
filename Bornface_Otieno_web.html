@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bornface Otieno | Junior Statistician</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #1a252f;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--dark));
+            color: white;
+            padding: 1.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo i {
+            color: var(--secondary);
+            margin-right: 10px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            padding: 5px 0;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--secondary);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 5rem 0;
+            background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)), url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .highlight {
+            color: var(--secondary);
+            font-weight: 700;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #2980b9;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* About Section */
+        .section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--secondary);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .profile-image {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 1.3s ease, border 1.3s ease;
+        }
+
+        .profile-image:hover img {
+            transform: scale(1.2) translateY(-20px);
+            border: 2px solid var(--dark);
+        }
+
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 2rem;
+        }
+
+        .skill-tag {
+            background-color: var(--light);
+            padding: 8px 15px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--primary);
+        }
+
+        /* Contact Section */
+
+        .contact {
+            background-color: var(--light);
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr 0.3fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .contact-image {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .contact-profile-image {
+            width: 100%;
+            max-width: 280px;
+            height: auto;
+            border-radius: 50px;
+            box-shadow: 0 20px 25px -10px rgba(0, 0, 0, 0.7);
+            transition: transform 1.3s ease;
+        }
+
+        .contact-profile-image:hover {
+            transform: scale(1.9);
+        }
+
+        .contact-form {
+            background-color: white;
+            padding: 2.5rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--primary);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border 0.3s;
+        }
+
+        .form-control:focus {
+            border-color: var(--secondary);
+            outline: none;
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .contact-info {
+            padding: 1rem 0;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .info-icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--secondary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .contact-form:hover {
+            transform: scale(1.12);
+            overflow: hidden;
+            transition: transform 1.6s ease;
+            transform-origin: top-center;
+        }
+
+        .contact-info:hover {
+            transform: scale(1.12);
+            overflow: hidden;
+            transition: transform 1.6s ease;
+            transform-origin: top-center;
+        }
+
+        /* Admin Panel */
+        .admin-panel {
+            background-color: white;
+            padding: 2.5rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            margin-top: 3rem;
+            display: none;
+        }
+
+        .admin-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        #messageList {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .message-item {
+            background-color: #f8f9fa;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-radius: 5px;
+            border-left: 4px solid var(--secondary);
+        }
+
+        .message-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+
+        .message-name {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .message-date {
+            font-size: 0.85rem;
+            color: #777;
+        }
+
+        .message-email {
+            color: var(--secondary);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--secondary);
+        }
+
+        .copyright {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        :root {
+            --dark: #2c3e50;
+        }
+
+        /*professional skills*/
+        .skill-section {
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            border: 1px solid #e0e0e0;
+            border-radius: 20px;
+            /* if you want rounded corners */
+            padding: 2rem;
+            display: inline-block;
+            margin: 0 auto;
+            /* Centers the block horizontally */
+            position: relative;
+            left: 35%;
+        }
+
+
+        .professional {
+            text-align: center;
+        }
+
+        .professional h1 {
+            color: #1a252f;
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
+            border-left: none;
+            /* Remove the blue border if you had one */
+        }
+
+        .skill {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2.5rem 3rem;
+            max-width: 600px;
+            margin: 0 auto;
+            justify-items: center;
+
+        }
+
+        .skill>div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+
+        }
+
+        .skill h2 {
+            color: var(--dark);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            order: -1;
+            /* Keeps heading above circle */
+        }
+
+        .progress-circle {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: #eaeef3;
+            /* Light gray track */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .progress-pie {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: conic-gradient(var(--dark) 0deg var(--progress-deg), #dde3e9 var(--progress-deg) 360deg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            outline: 3px solid white;
+            outline-offset: -1px;
+        }
+
+        .percent-value {
+            font-size: 2rem;
+            font-weight: 800;
+            color: white;
+            background: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+
+        .percent-value small {
+            font-size: 1rem;
+            font-weight: 600;
+            color: white;
+            margin-left: 2px;
+        }
+
+        .professional h1::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            /* Length from F to K */
+            height: 3px;
+            background-color: var(--dark);
+        }
+
+        /* Progress values */
+        .teamwork-circle {
+            --progress-deg: 288deg;
+        }
+
+        /* 80% */
+        .learning-circle {
+            --progress-deg: 288deg;
+        }
+
+        /* 80% */
+        .creativity .progress-pie {
+            --progress-deg: 324deg;
+        }
+
+        /* 90% */
+        .communication .progress-pie {
+            --progress-deg: 306deg;
+        }
+
+        /* 85% */
+
+        /* Remove any background blocks */
+        .professional,
+        .skill,
+        .skill-section>div {
+            background: transparent !important;
+        }
+
+        .skill:hover {
+            transform: scale(1.12);
+            overflow: hidden;
+            transition: transform 1.6s ease;
+            transform-origin: top-center;
+        }
+
+
+
+
+        /* Responsive */
+        @media (max-width: 992px) {
+
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: var(--primary);
+                flex-direction: column;
+                align-items: center;
+                padding: 2rem 0;
+                transform: translateY(-150%);
+                transition: transform 0.4s;
+                box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-links.active {
+                transform: translateY(0);
+            }
+
+            .nav-links li {
+                margin: 1rem 0;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <i class="fas fa-chart-line"></i> Bornface Otieno
+            </div>
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#" id="adminToggle">Admin</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <h1>Bornface <span class="highlight">Otieno</span></h1>
+            <p>Junior Statistician | Data Analyst </p>
+            <p>Interested in transforming raw data into meaningful insights using statistical methods, predictive
+                modeling, and data visualization. Currently exploring the impact of external shocks on economic
+                indicators through intervention analysis.</p>
+            <a href="#contact" class="btn">Reach Me</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Me</h2>
+            </div>
+            <div class="about-content">
+                <div class="profile-image">
+                    <img src="pic_3.jpg" alt="Bornface Otieno">
+                </div>
+                <div class="about-text">
+                    <h3>Data Problem Solver</h3>
+                    <p>I'm a junior statistician with a strong foundation in statistical modeling, data analysis, and
+                        research methodology. My academic work has focused on time-series forecasting, particularly
+                        using ARIMA and intervention analysis to assess the impact of significant events like the
+                        COVID-19 pandemic on tourism trends in Kenya.</p>
+                    <p>I'm proficient in R, Python, SPSS, and Excel for statistical analysis, and I enjoy creating clear
+                        visualizations to communicate complex findings. My recent research involved developing
+                        forecasting models that account for structural breaks, providing more accurate predictions in
+                        volatile environments.</p>
+                    <p>I'm eager to apply my analytical skills to real-world challenges in economics, public policy, or
+                        business intelligence, and I'm continuously learning new techniques to enhance my expertise.</p>
+
+                    <div class="skills">
+                        <span class="skill-tag">Statistical Analysis</span>
+                        <span class="skill-tag">R Programming</span>
+                        <span class="skill-tag">Python(Pandas)</span>
+                        <span class="skill-tag">Data Visualization</span>
+                        <span class="skill-tag">Excel</span>
+                        <span class="skill-tag">Research Design</span>
+                        <span class="skill-tag">Time-Series Forecasting</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section-contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get In Touch</h2>
+            </div>
+            <div class="contact-content">
+
+                <div class="contact-form">
+                    <form id="messageForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" class="form-control" placeholder="your.email@example.com"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" class="form-control" placeholder="Message Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" class="form-control" placeholder="Hello Bornface, When are ........"
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                        <p id="formMessage" style="margin-top: 1rem; display: none;"></p>
+                    </form>
+                </div>
+
+                <div class="contact-info">
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <h3>Bornface Otieno</h3>
+                            <p>Junior Statistician & Data Analyst</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h3>Location</h3>
+                            <p>Nairobi, Kenya</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h3>Email</h3>
+                            <p>bornyken11455@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>+254 708 407 389</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-image">
+                    <img src="pic_4.jpg" alt="B.O.O" class="contact-profile-image">
+                </div>
+            </div>
+            <!-- Admin Panel (Hidden by default) -->
+            <div class="admin-panel" id="adminPanel">
+                <div class="admin-header">
+                    <h3>Message Inbox</h3>
+                    <button class="btn" id="refreshMessages">Refresh</button>
+                </div>
+                <div id="messageList">
+                    <!-- Messages will appear here -->
+                    <p class="no-messages">No messages yet. Messages will appear here when visitors contact you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="skill-section" id="skills">
+        <div class="professional">
+
+            <h1 class="section-title">Professional Skills</h1>
+
+            <div class="skill">
+                <div class="teamwork">
+                    <h2>Team Work</h2>
+                    <div class="progress-circle">
+                        <div class="progress-pie teamwork-circle">
+                            <span class="percent-value">80<small>%</small></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="learning">
+                    <h2>Learning</h2>
+                    <div class="progress-circle">
+                        <div class="progress-pie learning-circle">
+                            <span class="percent-value">80<small>%</small></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="creativity">
+                    <h2>Creativity</h2>
+                    <div class="progress-circle">
+                        <div class="progress-pie learning-circle">
+                            <span class="percent-value">90<small>%</small></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="communication">
+                    <h2>Communication</h2>
+                    <div class="progress-circle">
+                        <div class="progress-pie learning-circle">
+                            <span class="percent-value">85<small>%</small></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-chart-line"></i> Bornface Otieno
+            </div>
+            <p>Making informed decisions from a Data Analyst's Point of View!</p>
+
+            <div class="social-links">
+                <a
+                    href="https://www.linkedin.com/in/bornface-otieno-439341309/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BzoNl0%2BgoRu%2BzwoaPB8UhrQ%3D%3D"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="https://x.com/home"><i class="fab fa-twitter"></i></a>
+                <a href="https://web.facebook.com/borny.otieno.02"><i class="fab fa-facebook"></i></a>
+            </div>
+
+            <div class="copyright">
+                &copy; 2025 Bornface Otieno. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Admin Panel Toggle
+        const adminToggle = document.getElementById('adminToggle');
+        const adminPanel = document.getElementById('adminPanel');
+
+        adminToggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            adminPanel.style.display = adminPanel.style.display === 'block' ? 'none' : 'block';
+
+            // Load messages when opening admin panel
+            if (adminPanel.style.display === 'block') {
+                loadMessages();
+            }
+        });
+
+        // Store messages in localStorage (simulated backend)
+        let messages = JSON.parse(localStorage.getItem('bornfaceMessages')) || [];
+
+        // Message Form Submission
+        const messageForm = document.getElementById('messageForm');
+        const formMessage = document.getElementById('formMessage');
+
+        messageForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+
+            const newMessage = {
+                id: Date.now(),
+                name: name,
+                email: email,
+                subject: subject,
+                message: message,
+                date: new Date().toLocaleString()
+            };
+
+            messages.push(newMessage);
+            localStorage.setItem('bornfaceMessages', JSON.stringify(messages));
+
+            // Show success message
+            formMessage.textContent = "Thank you! Your message has been sent successfully.";
+            formMessage.style.color = "green";
+            formMessage.style.display = "block";
+
+            // Clear form
+            messageForm.reset();
+
+            // If admin panel is open, refresh messages
+            if (adminPanel.style.display === 'block') {
+                loadMessages();
+            }
+
+            // Hide message after 5 seconds
+            setTimeout(() => {
+                formMessage.style.display = "none";
+            }, 5000);
+        });
+
+        // Load messages for admin panel
+        function loadMessages() {
+            const messageList = document.getElementById('messageList');
+            messages = JSON.parse(localStorage.getItem('bornfaceMessages')) || [];
+
+            if (messages.length === 0) {
+                messageList.innerHTML = '<p class="no-messages">No messages yet. Messages will appear here when visitors contact you.</p>';
+                return;
+            }
+
+            // Sort by most recent first
+            const sortedMessages = messages.sort((a, b) => b.id - a.id);
+
+            messageList.innerHTML = sortedMessages.map(msg => `
+                <div class="message-item">
+                    <div class="message-header">
+                        <span class="message-name">${msg.name}</span>
+                        <span class="message-date">${msg.date}</span>
+                    </div>
+                    <div class="message-email">${msg.email}</div>
+                    <div><strong>Subject:</strong> ${msg.subject}</div>
+                    <div style="margin-top: 10px;">${msg.message}</div>
+                </div>
+            `).join('');
+        }
+
+        // Refresh messages button
+        document.getElementById('refreshMessages').addEventListener('click', loadMessages);
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                if (this.getAttribute('href') === '#') return;
+
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+
+                // Close mobile menu if open
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

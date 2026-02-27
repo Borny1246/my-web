@@ -1,0 +1,31 @@
+html {
+    text-align: center;
+}
+
+body {
+    background-color: cadetblue;
+    font-size: 20px;
+}
+
+.name {
+    margin-bottom: 20px;
+    font-family: ;
+}
+
+.about {
+    margin-bottom: 30px;
+}
+
+.submission:hover {
+    background-color: black;
+    color: white;
+}
+
+textarea {
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+label {
+    margin-bottom: 20px;
+}
